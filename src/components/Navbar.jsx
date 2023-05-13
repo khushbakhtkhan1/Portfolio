@@ -21,19 +21,20 @@ Home,
 Apps,
 ContactMail
 } from "@material-ui/icons";
+import Footer from './Footer';
 import { ListItemText } from '@mui/material';
 
 const useStyles=makeStyles(theme=>({
     menuSliderContainer:{
-        width: 250,
+        width: 320,
         background:"#2C0354",
         height:"100%"
     },
     avatar:{
         display:"block",
         margin:"0.5rem auto",
-        width: theme.spacing(14),
-        height: theme.spacing(14)
+        width: theme.spacing(18),
+        height: theme.spacing(18)
     },
     listItem:{
         color:"#D5BCFA"
@@ -53,11 +54,13 @@ const menuItems=[
     },
     {
         listIcon: <Apps />,
-        listText:"Portfolio"
+        listText:"Portfolio",
+        listPath:"/portfolio"
     },
     {
         listIcon: <ContactMail />,
-        listText:"Contacts"
+        listText:"Contacts",
+        listPath:"/contacts"
     }
 
 ]
@@ -100,6 +103,7 @@ const Navbar = () => {
                     </Typography>
                     <MobilRightMenuSlider anchor='right' open={state.right} onClose={toggleSlider("right",false)} >
                         {sideList("right")}
+                        <Footer />
                     </MobilRightMenuSlider>
                 </Toolbar>
             </AppBar>

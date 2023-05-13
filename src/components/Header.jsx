@@ -10,16 +10,16 @@ import Typed from "react-typed"
 
 const useStyles=makeStyles(theme=>({
   avatar:{
-    width:theme.spacing(15),
-    height:theme.spacing(15),
+    width:theme.spacing(20),
+    height:theme.spacing(20),
     margin:theme.spacing(1)
   },
   title:{
     color:"#D5BCFA"
   },
   subtitle:{
-    color:"#703AC0",
-    marginBottom:"3rem"
+    color:"#A639CD",
+    marginBottom:"4rem"
   },
   typedcontainer:{
     zIndex:1,

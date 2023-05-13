@@ -110,6 +110,57 @@ const Resume = () => {
     <Navbar />
     <Box component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>
+            Education
+        </Typography>
+        <Box component="div" className={classes.timeLine}>
+            <Typography variant="h2" className={`${classes.timeLineYear} ${classes.timeLineItem}`}>2021-2025</Typography>
+            <Box component="div" className={classes.timeLineItem}>
+                <Typography variant="h5"
+                align="center"
+                className={classes.subheading}
+                >
+                    Software Engineering
+                </Typography>
+                <Typography variant="body1" align="center" style={{color:"#B15DDD"}} >
+                Ned University of engineering and technology, Karachi
+                </Typography>
+                <Typography variant="subtitle1" align="center" style={{color:"#D5BCFA"}}>
+                CGPA(as of 1st year) : 3.67 / 4.00
+                </Typography>
+            </Box>
+            <Typography variant="h2" className={`${classes.timeLineYear} ${classes.timeLineItem}`}>2021</Typography>
+            <Box component="div" className={classes.timeLineItem}>
+                <Typography variant="h5"
+                align="center"
+                className={classes.subheading}
+                >
+                   Pre-Engineering HSC(II)
+                </Typography>
+                <Typography variant="body1" align="center" style={{color:"#B15DDD"}} >
+                St. Lawrence Govt Girls Degree College, Karachi
+                </Typography>
+                <Typography variant="subtitle1" align="center" style={{color:"#D5BCFA"}}>
+                Secured 95% / 100%
+                </Typography>
+            </Box>
+            <Typography variant="h2" className={`${classes.timeLineYear} ${classes.timeLineItem}`}>2019</Typography>
+            <Box component="div" className={classes.timeLineItem}>
+                <Typography variant="h5"
+                align="center"
+                className={classes.subheading}
+                >
+                   Science Group SSC(II)
+                </Typography>
+                <Typography variant="body1" align="center" style={{color:"#B15DDD"}} >
+                Little Folk's School, Karachi
+                </Typography>
+                <Typography variant="subtitle1" align="center" style={{color:"#D5BCFA"}}>
+               Secured 85% / 100%
+                </Typography>
+            </Box>
+            
+        </Box>
+        <Typography variant="h4" align="center" className={classes.heading}>
             What I Do
         </Typography>
         <Box component="div" className={classes.timeLine}>

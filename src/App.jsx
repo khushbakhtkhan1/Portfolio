@@ -4,6 +4,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import "./App.css";
 import Home from "./components/";
 import Resume from "./components/Resume";
+import Portfolio from "./components/Portfolio";
+import Contacts from "./components/Contacts";
 
 
 const App=()=>{
@@ -14,6 +16,8 @@ const App=()=>{
     <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/resume" element={<Resume />} />
+    <Route path="/portfolio" element={<Portfolio />} />
+    <Route path="/contacts" element={<Contacts />} />
     </Routes>
     
     </>
