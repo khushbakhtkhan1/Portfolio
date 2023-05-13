@@ -1,25 +1,21 @@
 import React from "react";
+import {Route, Routes} from "react-router-dom";
 import CssBaseline from '@mui/material/CssBaseline';
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Particles from "react-tsparticles";
+import Home from "./components/";
+import Resume from "./components/Resume";
+
 
 const App=()=>{
   return(
     <>
+    
     <CssBaseline />
-    <Navbar />
-    <Header />
-    <Particles 
-      params={{
-        particles:{
-          number:{
-            value:45,
-          }
-        }
-      }}
-    />
+    <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/resume" element={<Resume />} />
+    </Routes>
+    
     </>
   )
 }
