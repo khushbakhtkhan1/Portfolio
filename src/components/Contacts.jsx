@@ -5,7 +5,8 @@ TextField,
 Typography,
 Grid,
 Button,
-Box
+Box,
+FormControl
 }from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import Navbar from './Navbar';
@@ -53,6 +54,7 @@ const Contacts = () => {
         <Navbar />
         <Grid container justifyContent='center'>
             <Box component="form" className={classes.form}>
+            <FormControl action="https://send.pageclip.co/KRUQS5No9DJqo4Y1Vblb0D3Bpbs00iQr" method="post">
                 <Typography variant="h5" style={{color:"#B15DDD",textAlign:"center",textTransform:"uppercase"}}>
                     Hire or Contact me...
                 </Typography>
@@ -65,6 +67,7 @@ const Contacts = () => {
                 <Button className={classes.button} variant="outlined" fullWidth={true} endIcon={<SendIcon />} >
                     Contact Me
                 </Button>
+                </FormControl>
             </Box>
         </Grid>
     </Box>

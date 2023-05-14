@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <Box className={classes.typedcontainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src="./beachy.png" alt="Khushbakht Khan" />
+        <Avatar className={classes.avatar} src="./beachy.jpg" alt="Khushbakht Khan" />
         </Grid>
         <Typography className={classes.title} variant='h4'>
             <Typed strings={["Khushbakht Khan"]} typeSpeed={40} />
