@@ -53,7 +53,7 @@ const Contacts = () => {
         <Navbar />
         <Grid container justifyContent='center'>
             <Box component="form" className={classes.form}>
-            <form action="https://send.pageclip.co/KRUQS5No9DJqo4Y1Vblb0D3Bpbs00iQr" class="pageclip-form" method="post">
+            {/* <form action="https://send.pageclip.co/KRUQS5No9DJqo4Y1Vblb0D3Bpbs00iQr" class="pageclip-form" method="post">
   
   <input type="text" name="name" value="Enter your name" margin="dense" size="medium" inputProps={{style:{color:"blue"}}} />
   <input type="email" name="email" value="Enter your email" />
@@ -61,9 +61,9 @@ const Contacts = () => {
   <button type="submit" class="pageclip-form__submit">
     <span>Send</span>
   </button>
-</form>
+</form> */}
                 
-                {/* <Typography variant="h5" style={{color:"#B15DDD",textAlign:"center",textTransform:"uppercase"}}>
+                <Typography variant="h5" style={{color:"#B15DDD",textAlign:"center",textTransform:"uppercase"}}>
                     Hire or Contact me...
                 </Typography>
                 <InputField fullWidth={true} label="Name" variant="outlined" margin="dense" size="medium" inputProps={{style:{color:"white"}}} />
@@ -74,7 +74,7 @@ const Contacts = () => {
                 <br />
                 <Button className={classes.button} variant="outlined" fullWidth={true} endIcon={<SendIcon />} >
                     Contact Me
-                </Button> */}
+                </Button>
             </Box>
         </Grid>
     </Box>
