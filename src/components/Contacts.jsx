@@ -51,14 +51,24 @@ const Contacts = () => {
   return (
     <Box component="div" style={{background:"#29093A", height:"100vh"}}>
         <Navbar />
-        <form action="https://send.pageclip.co/KRUQS5No9DJqo4Y1Vblb0D3Bpbs00iQr" className="pageclip-form" method="post">
+        <Grid container justifyContent='center'>
+          
+            <Box component="form" className={classes.form}>
+            <form action="https://send.pageclip.co/KRUQS5No9DJqo4Y1Vblb0D3Bpbs00iQr" className="pageclip-form" method="post">
+
   <input type="text" name="name" value="Roscoe Jones" />
   <input type="email" name="email" value="roscoe@example.com" />
 
+  
   <button type="submit" className="pageclip-form__submit">
     <span>Send</span>
   </button>
 </form>
+              
+              
+            </Box>
+           
+        </Grid>
     </Box>
   )
 }
