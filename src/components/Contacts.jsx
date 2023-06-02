@@ -35,8 +35,8 @@ const Contacts = () => {
             <Box component="form" className={classes.form}>
             <form action="https://send.pageclip.co/KRUQS5No9DJqo4Y1Vblb0D3Bpbs00iQr" className="pageclip-form" method="post">
 
-  <input type="text" name="name" value="Roscoe Jones" />
-  <input type="email" name="email" value="roscoe@example.com" />
+  <input type="text" name="name" placeholder="enter your name" />
+  <input type="email" name="email" placeholder="enter your email" />
 
   
   <button type="submit" className="pageclip-form__submit">
