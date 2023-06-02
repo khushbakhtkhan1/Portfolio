@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles,withStyles } from "@material-ui/core/styles";
 import {
 TextField,
-Typography,
+
 Grid,
-Button,
+
 Box
 }from "@material-ui/core";
-import SendIcon from "@material-ui/icons/Send";
+
 import Navbar from './Navbar';
 
 const useStyles=makeStyles((theme)=>({
@@ -24,27 +24,6 @@ const useStyles=makeStyles((theme)=>({
     }
 }))
 
-const InputField=withStyles({
-    root:{
-        "& label.Mui-focused":{
-            color:"#B15DDD",
-        },
-        "& label":{
-            color:"#D5BCFA",
-        },
-        "& .MuiOutlinedInput-root":{
-            "& fieldset":{
-                borderColor:"#D5BCFA",
-            },
-            "&:hover fieldset":{
-                borderColor:"#D5BCFA",
-            },
-            "&.Mui-focused fieldset":{
-                borderColor:"D5BCFA"
-            },
-        }
-    },
-})(TextField);
 
 const Contacts = () => {
     const classes=useStyles()
