@@ -13,7 +13,7 @@ import Navbar from './Navbar';
 const useStyles=makeStyles((theme)=>({
     form:{
         top:"50%",
-        left:"50%",
+        left:"55%",
         transform:"translate(-50%, -50%)",
         position:"absolute",
     },
@@ -39,14 +39,14 @@ const Contacts = () => {
   color: '#B15DDD', 
   borderRadius: '5px',
   borderColor: '#D5BCFA',
-  width:'100%',
+  width:'80%',
   fontSize:'30px' }}>HIRE OR CONTACT ME</h2>
   <input type="text" name="name" placeholder="Name" style={{ backgroundColor: 'transparent',
   color: 'white', 
   padding:"10px 20px",
   borderRadius: '5px',
   borderColor: '#D5BCFA',
-  width:'100%',
+  width:'80%',
   fontSize:'16px',
   marginBottom:"10px" }}/>
   <input type="email" name="email" placeholder="Email" style={{ backgroundColor: 'transparent',
@@ -54,7 +54,7 @@ const Contacts = () => {
   padding:"10px 20px",
   borderRadius: '5px',
   borderColor: '#D5BCFA',
-  width:'100%',
+  width:'80%',
   fontSize:'16px',
   marginBottom:"10px" }}/>
 
@@ -63,7 +63,7 @@ const Contacts = () => {
   padding:"10px 20px",
   borderRadius: '5px',
   borderColor: '#D5BCFA',
-  width:'100%',
+  width:'80%',
   fontSize:'16px',
   marginBottom:"20px" }}></textarea>
   <button type="submit" className="pageclip-form__submit" style={{ backgroundColor: 'transparent',
@@ -71,7 +71,7 @@ const Contacts = () => {
   padding:"10px 20px",
   borderRadius: '5px',
   borderColor: '#D5BCFA',
-  width:'100%',
+  width:'80%',
   fontSize:'18px' }}>
     <span>Send</span>
   </button>
