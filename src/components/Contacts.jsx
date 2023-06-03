@@ -40,7 +40,7 @@ const Contacts = () => {
   borderRadius: '5px',
   borderColor: '#D5BCFA',
   width:'100%',
-  fontSize:'30px' }}>HIRE OR CONTACT ME</h2>
+  fontSize:'20px' }}>HIRE OR CONTACT ME</h2>
   <input type="text" name="name" placeholder="Name" style={{ backgroundColor: 'transparent',
   color: 'white', 
   padding:"10px 20px",
@@ -58,7 +58,7 @@ const Contacts = () => {
   fontSize:'16px',
   marginBottom:"10px" }}/>
 
-  <textarea name="message" id="mg" cols="30" rows="10" placeholder='message' style={{ backgroundColor: 'transparent',
+  <textarea name="message" id="mg" cols="30" rows="10" placeholder='Message' style={{ backgroundColor: 'transparent',
   color: '#B15DDD', 
   padding:"10px 20px",
   borderRadius: '5px',
