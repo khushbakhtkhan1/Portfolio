@@ -1,0 +1,12 @@
+.purple-placeholder::placeholder {
+    color: #D5BCFA;
+}
+input:focus::placeholder {
+    font-size: 12px;
+}
+textarea:focus::placeholder {
+    font-size: 12px;
+}
+button{
+    cursor: pointer;
+}

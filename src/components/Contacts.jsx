@@ -1,10 +1,8 @@
 import React from 'react';
+import './Contact.css';
 import { makeStyles} from "@material-ui/core/styles";
 import {
-
-
 Grid,
-
 Box
 }from "@material-ui/core";
 
@@ -41,7 +39,7 @@ const Contacts = () => {
   borderColor: '#D5BCFA',
   width:'100%',
   fontSize:'20px' }}>HIRE OR CONTACT ME...</h2>
-  <input type="text" name="name" placeholder="Name" style={{ backgroundColor: 'transparent',
+  <input type="text" name="name" placeholder="Name" className="purple-placeholder" style={{ backgroundColor: 'transparent',
   color: 'white', 
   padding:"10px 20px",
   borderRadius: '5px',
@@ -49,7 +47,7 @@ const Contacts = () => {
   width:'100%',
   fontSize:'16px',
   marginBottom:"10px" }}/>
-  <input type="email" name="email" placeholder="Email" style={{ backgroundColor: 'transparent',
+  <input type="email" name="email" placeholder="Email" className="purple-placeholder" style={{ backgroundColor: 'transparent',
   color: 'white', 
   padding:"10px 20px",
   borderRadius: '5px',
@@ -58,7 +56,7 @@ const Contacts = () => {
   fontSize:'16px',
   marginBottom:"10px" }}/>
 
-  <textarea name="message" id="mg" cols="30" rows="10" placeholder='Message' style={{ backgroundColor: 'transparent',
+  <textarea name="message" id="mg" cols="30" rows="10" placeholder='Message' className="purple-placeholder" style={{ backgroundColor: 'transparent',
   color: 'white', 
   padding:"10px 20px",
   borderRadius: '5px',
@@ -73,7 +71,7 @@ const Contacts = () => {
   borderColor: '#D5BCFA',
   width:'100%',
   fontSize:'18px' }}>
-    <span>Send</span>
+    <span>CONTACT ME</span>
   </button>
 </form>
               
