@@ -34,7 +34,13 @@ const Contacts = () => {
           
             <Box component="form" className={classes.form}>
             <form action="https://send.pageclip.co/KRUQS5No9DJqo4Y1Vblb0D3Bpbs00iQr" className="pageclip-form" method="post">
-
+    <h2 style={{
+  textAlign:"center",
+  color: '#B15DDD', 
+  borderRadius: '5px',
+  borderColor: '#D5BCFA',
+  width:'100%',
+  fontSize:'30px' }}>HIRE OR CONTACT ME</h2>
   <input type="text" name="name" placeholder="Name" style={{ backgroundColor: 'transparent',
   color: 'white', 
   padding:"10px 20px",
@@ -50,9 +56,16 @@ const Contacts = () => {
   borderColor: '#D5BCFA',
   width:'100%',
   fontSize:'16px',
-  marginBottom:"25px" }}/>
+  marginBottom:"10px" }}/>
 
-  
+  <textarea name="message" id="mg" cols="30" rows="10" placeholder='message' style={{ backgroundColor: 'transparent',
+  color: '#B15DDD', 
+  padding:"10px 20px",
+  borderRadius: '5px',
+  borderColor: '#D5BCFA',
+  width:'100%',
+  fontSize:'16px',
+  marginBottom:"20px" }}></textarea>
   <button type="submit" className="pageclip-form__submit" style={{ backgroundColor: 'transparent',
   color: '#B15DDD', 
   padding:"10px 20px",
