@@ -35,8 +35,22 @@ const Contacts = () => {
             <Box component="form" className={classes.form}>
             <form action="https://send.pageclip.co/KRUQS5No9DJqo4Y1Vblb0D3Bpbs00iQr" className="pageclip-form" method="post">
 
-  <input type="text" name="name" placeholder="Name" />
-  <input type="email" name="email" placeholder="Email" />
+  <input type="text" name="name" placeholder="Name" style={{ backgroundColor: 'transparent',
+  color: 'white', 
+  padding:"10px 20px",
+  borderRadius: '5px',
+  borderColor: '#D5BCFA',
+  width:'100%',
+  fontSize:'16px',
+  marginBottom:"10px" }}/>
+  <input type="email" name="email" placeholder="Email" style={{ backgroundColor: 'transparent',
+  color: 'white', 
+  padding:"10px 20px",
+  borderRadius: '5px',
+  borderColor: '#D5BCFA',
+  width:'100%',
+  fontSize:'16px',
+  marginBottom:"25px" }}/>
 
   
   <button type="submit" className="pageclip-form__submit" style={{ backgroundColor: 'transparent',
