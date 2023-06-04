@@ -11,7 +11,6 @@ import Contacts from "./components/Contacts";
 const App=()=>{
   return(
     <>
-    
     <CssBaseline />
     <Routes>
     <Route path="/" element={<Home />} />
