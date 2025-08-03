@@ -67,7 +67,7 @@ const projects = [
         image: '/chatbot.png',
         tags: ['DialoGPT', 'Hugging Face', 'Gradio', 'Sentiment Analysis', 'NLP', 'Python'],
         liveDemo: null,
-        view: null,
+        view: 'https://github.com/khushbakhtkhan1/Conversational-AI-Chatbot',
         documentation: '/chatbot-report.pdf',
       },
       {
