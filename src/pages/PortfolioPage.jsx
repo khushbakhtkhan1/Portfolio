@@ -49,7 +49,7 @@ const projects = [
         image: '/emergency-system.png',
         tags: ['React.js', 'FastAPI', 'Stochastic Modeling', 'Queuing Theory', 'Markov Chains', 'Data Visualization'],
         liveDemo: null,
-        view: null,
+        view: '/https://github.com/khushbakhtkhan1/Smart-Emergency-Response-Simulation',
         documentation: '/smart-emergency-simulation-report.pdf',
       },
       {
