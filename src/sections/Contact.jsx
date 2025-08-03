@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import { useForm, ValidationError } from '@formspree/react';
 import { 
   EnvelopeIcon, 
   MapPinIcon,
@@ -7,26 +8,8 @@ import {
 } from '@heroicons/react/24/outline';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
-  };
+  const [state, handleSubmit] = useForm("xvgqbdnz");
+  // No need for local formData state, Formspree will handle form values
 
   const socialLinks = [
     {
@@ -137,60 +120,78 @@ const Contact = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="card-container p-8"
+            className="card-container p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                />
+            {state.succeeded ? (
+              <div className="text-center py-8">
+                <h4 className="text-xl font-semibold text-primary mb-2">Thank you!</h4>
+                <p className="text-gray-700 dark:text-gray-300">Your message has been sent. I'll get back to you soon.</p>
               </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                />
-              </div>
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full btn-primary"
-              >
-                Send Message
-              </motion.button>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="form-group">
+                  <label 
+                    htmlFor="name" 
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-200"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:shadow-outline"
+                    placeholder="Your name"
+                  />
+                  <ValidationError prefix="Name" field="name" errors={state.errors} />
+                </div>
+                <div className="form-group">
+                  <label 
+                    htmlFor="email" 
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-200"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:shadow-outline"
+                    placeholder="your.email@example.com"
+                  />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} />
+                </div>
+                <div className="form-group">
+                  <label 
+                    htmlFor="message" 
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-200"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:shadow-outline resize-none"
+                    placeholder="How can I help you with your project?"
+                  />
+                  <ValidationError prefix="Message" field="message" errors={state.errors} />
+                </div>
+                <motion.button
+                  type="submit"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full btn-primary py-3 px-6 text-base font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+                  disabled={state.submitting}
+                >
+                  {state.submitting ? 'Sending...' : 'Send Message'}
+                </motion.button>
+              </form>
+            )}
+
           </motion.div>
         </div>
       </div>
