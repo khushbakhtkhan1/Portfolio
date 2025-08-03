@@ -1,26 +1,28 @@
 import React from "react";
-import {Route, Routes} from "react-router-dom";
-import CssBaseline from '@mui/material/CssBaseline';
+import { Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion';
 import "./App.css";
 import Home from "./components/";
-import Resume from "./components/Resume";
-import Portfolio from "./components/Portfolio";
-import Contacts from "./components/Contacts";
+import ResumePage from "./pages/ResumePage";
+import PortfolioPage from "./pages/PortfolioPage";
+import ContactPage from "./pages/ContactPage";
+import ChatBot from "./components/ChatBot";
 
+const App = () => {
+  const location = useLocation();
+  return (
+    <div>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </AnimatePresence>
+      <ChatBot />
+    </div>
+  );
+};
 
-const App=()=>{
-  return(
-    <>
-    <CssBaseline />
-    <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/resume" element={<Resume />} />
-    <Route path="/portfolio" element={<Portfolio />} />
-    <Route path="/contact" element={<Contacts />} />
-    </Routes>
-    
-    </>
-  )
-}
 export default App;
-

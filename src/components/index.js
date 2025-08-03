@@ -1,34 +1,28 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Header from "./Header";
-import Particles from "react-tsparticles";
-import { makeStyles } from "@material-ui/core/styles";
+import About from "../sections/About";
+import Skills from "../sections/Skills";
+import Projects from "../sections/Projects";
+import Experience from "../sections/Experience";
+import ChatBot from "./ChatBot";
+import Contact from "../sections/Contact";
+import Footer from "./Footer";
 
-const useStyles=makeStyles({
-    particlesCanva:{
-        position:"absolute",
-        opacity:"0.3"
-    }
-});
+const Home = () => {
+  return (
+    <div className="bg-white dark:bg-gray-900">
+      <Navbar />
+      <Header />
+      <About />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Contact />
+      <ChatBot />
+      <Footer />
+    </div>
+  );
+};
 
-const Home=()=>{
-    const classes=useStyles();
-
-    return(
-        <>
-        <Navbar />
-        <Header />
-        <Particles
-        canvasClassName={classes.particlesCanva}
-        params={{
-            particles:{
-              number:{
-                value:45
-              }  
-            }
-        }}
-        />
-        </>
-    )
-}
 export default Home;
