@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useForm, ValidationError } from '@formspree/react';
 import { EnvelopeIcon, MapPinIcon, DocumentArrowDownIcon } from '@heroicons/react/24/outline';
-
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 // Social Links Data
 const socialLinks = [
   { 
@@ -27,6 +28,8 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <Navbar />
+      <main className="container mx-auto px-4 py-24 sm:py-32">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -213,6 +216,8 @@ const ContactPage = () => {
           </motion.div>
         </div>
       </motion.div>
+      </main>
+      <Footer />
     </div>
   );
 };
