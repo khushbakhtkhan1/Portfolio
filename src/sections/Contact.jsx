@@ -176,7 +176,7 @@ const Contact = () => {
                     rows={5}
                     required
                     className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:shadow-outline resize-none"
-                    placeholder="How can I help you with your project?"
+                    placeholder="How can I help you?"
                   />
                   <ValidationError prefix="Message" field="message" errors={state.errors} />
                 </div>

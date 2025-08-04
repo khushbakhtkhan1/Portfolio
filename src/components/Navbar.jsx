@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Bars3Icon as Menu, XMarkIcon as X, SunIcon as Sun, MoonIcon as Moon } from '@heroicons/react/24/outline';
+import { useThemeMode } from '../theme/ThemeContext';
 
 const menuItems = [
   { text: 'Home', path: '/' },
@@ -11,23 +12,14 @@ const menuItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return document.documentElement.classList.contains('dark');
-    }
-    return false;
-  });
+  const { mode, toggleTheme } = useThemeMode();
   const location = useLocation();
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
-
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+  
+  const darkMode = mode === 'dark';
+  
+  const toggleDarkMode = () => {
+    toggleTheme();
+  };
 
   return (
     <nav className="fixed w-full bg-bg-light/80 dark:bg-bg-dark/80 backdrop-blur-lg z-50 border-b border-gray-200/50 dark:border-gray-700/50 transition-all">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Radar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -9,6 +9,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { useThemeMode } from '../theme/ThemeContext';
 
 ChartJS.register(
   RadialLinearScale,
@@ -31,11 +32,13 @@ const skills = [
   { name: 'FastAPI', level: '85%' },
   { name: 'Python', level: '87%' },
   { name: 'Node.js', level: '85%' },
-
 ];
 
 const Skills = () => {
-  const data = {
+  const { mode } = useThemeMode();
+  const isDarkMode = mode === 'dark';
+  
+  const chartData = useMemo(() => ({
     labels: skills.map((skill) => skill.name),
     datasets: [
       {
@@ -45,43 +48,59 @@ const Skills = () => {
         borderColor: 'rgba(112, 58, 192, 1)',
         borderWidth: 2,
         pointBackgroundColor: 'rgba(112, 58, 192, 1)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
+        pointBorderColor: isDarkMode ? '#1f2937' : '#fff',
+        pointHoverBackgroundColor: isDarkMode ? '#1f2937' : '#fff',
         pointHoverBorderColor: 'rgba(112, 58, 192, 1)',
       },
     ],
-  };
+  }), [isDarkMode]);
 
-  const options = {
+  const chartOptions = useMemo(() => ({
     responsive: true,
     maintainAspectRatio: false,
     scales: {
       r: {
         angleLines: {
-          color: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)',
+          color: isDarkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)',
         },
         grid: {
-          color: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)',
+          color: isDarkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)',
         },
         pointLabels: {
-          color: document.documentElement.classList.contains('dark') ? '#FFF' : '#000',
+          color: isDarkMode ? '#E5E7EB' : '#1F2937',
           font: {
             size: 12,
+            weight: '500',
           },
         },
         ticks: {
-          color: document.documentElement.classList.contains('dark') ? '#FFF' : '#000',
-          backdropColor: 'transparent',
-          stepSize: 20
+          display: true,
+          color: isDarkMode ? '#E5E7EB' : '#1F2937',
+          backdropColor: isDarkMode ? '#1F2937' : '#F9FAFB',
+          stepSize: 20,
+          font: {
+            weight: '500',
+          },
         },
+        min: 0,
+        max: 100,
       },
     },
     plugins: {
       legend: {
         display: false,
       },
+      tooltip: {
+        titleColor: isDarkMode ? '#E5E7EB' : '#1F2937',
+        bodyColor: isDarkMode ? '#E5E7EB' : '#1F2937',
+        backgroundColor: isDarkMode ? '#374151' : '#FFFFFF',
+        borderColor: isDarkMode ? '#4B5563' : '#E5E7EB',
+        borderWidth: 1,
+        padding: 10,
+        displayColors: false,
+      },
     },
-  };
+  }), [isDarkMode]);
 
   return (
     <section id="skills" className="section-container bg-gray-50 dark:bg-gray-900 py-16 sm:py-24">
@@ -96,7 +115,7 @@ const Skills = () => {
         </div>
 
         <div className="mt-12 relative h-96 md:h-[500px] flex justify-center items-center">
-          <Radar data={data} options={options} />
+          <Radar data={chartData} options={chartOptions} />
         </div>
 
       </div>
