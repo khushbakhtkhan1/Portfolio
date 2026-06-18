@@ -21,17 +21,17 @@ ChartJS.register(
 );
 
 const skills = [
-  { name: 'n8n Automation', level: '90%' },
-  { name: 'React.js', level: '90%' },
-  { name: 'NLP & LLMs', level: '85%' },
-  { name: 'Langchain', level: '80%' },
-  { name: 'Transformers (Hugging Face / OpenAI)', level: '85%' },
-  { name: 'JavaScript', level: '90%' },
-  { name: 'Visualization (Power BI / Chart.js)', level: '90%' },
-  { name: 'Next.js', level: '80%' },
-  { name: 'FastAPI', level: '85%' },
-  { name: 'Python', level: '87%' },
-  { name: 'Node.js', level: '85%' },
+  { name: 'n8n Workflow Automation', level: '95%' },
+  { name: 'Python & Scripting', level: '92%' },
+  { name: 'API Integration', level: '90%' },
+  { name: 'NLP & LLMs', level: '88%' },
+  { name: 'LangChain', level: '85%' },
+  { name: 'Transformers (Hugging Face)', level: '85%' },
+  { name: 'React & Next.js', level: '90%' },
+  { name: 'FastAPI', level: '88%' },
+  { name: 'SQL / MongoDB', level: '85%' },
+  { name: 'JavaScript (ES6+)', level: '90%' },
+  { name: 'Visualization (Power BI / Chart.js)', level: '88%' },
 ];
 
 const Skills = () => {
@@ -110,7 +110,7 @@ const Skills = () => {
             Technical Proficiency
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-            Frontend-focused full stack development and automation expertise.
+            Specialized in n8n workflow automation, Python backend systems, and frontend integrations.
           </p>
         </div>
 

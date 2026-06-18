@@ -3,25 +3,42 @@ import { BriefcaseIcon, CalendarIcon } from '@heroicons/react/24/solid';
 
 const experiences = [
   {
+    role: 'Applied AI Automation Engineer',
+    company: 'Plutus21',
+    duration: 'Aug 2025 - Present',
+    description: [
+      'Designed and deployed AI-driven workflow automations using n8n, Python, and Replit across finance, marketing, and HR.',
+      'Built OpenAI-powered intelligent agents and custom integrations to automate repetitive processes.',
+      'Connected and integrated complex APIs to eliminate manual errors and boost business productivity.',
+    ],
+  },
+  {
+    role: 'Senior AI Automation Engineer (Part-time)',
+    company: 'SMBiz',
+    duration: 'Feb 2026 - June 2026',
+    description: [
+      'Built end-to-end automated lead generation and outreach systems using n8n, Apify, and GPT-4.',
+      'Developed AI-personalized email sequencing systems with automated follow-ups and CRM integrations.',
+      'Created custom social media automation and data extraction workflows to streamline marketing pipelines.',
+    ],
+  },
+  {
     role: 'Software Engineer',
     company: 'Iris Labs',
     duration: 'Sept 2023 - June 2025',
     description: [
-      'Built React/Next.js frontends with modern JavaScript frameworks and responsive design principles.',
-      'Developed FastAPI backends for AI projects, ensuring scalable and efficient API architecture.',
-      'Created and implemented n8n workflows for automation, collaborating with ML and backend teams.',
-      'Integrated AI/ML solutions into web applications, enhancing user experience and functionality.',
+      'Developed advanced n8n workflow automations, integrating custom API hooks and services.',
+      'Built responsive React/Next.js frontends and engineered FastAPI/Python backends for AI products.',
+      'Collaborated with machine learning and backend teams to deploy production AI solutions.',
     ],
   },
   {
     role: 'Full Stack Developer Intern',
-    company: 'Smart City Lab, NCAI',
-    duration: 'Jun 2023 - Aug 2023',
+    company: 'NCAI',
+    duration: 'Aug 2023 - Oct 2023',
     description: [
-      'Contributed to the development of an Advanced Driver Monitoring System using modern web technologies.',
-      'Integrated Firebase for real-time data management on the frontend, ensuring seamless data flow.',
-      'Collaborated with cross-functional teams to deliver high-quality full-stack solutions.',
-      'Implemented responsive UI components and optimized application performance.',
+      'Contributed to the development of an Advanced Driver Monitoring System using computer vision and Python.',
+      'Integrated Firebase for real-time data management on the frontend and dashboard components.',
     ],
   },
 ];
@@ -35,7 +52,7 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-            2+ years of hands-on development experience in frontend-focused full stack development and automation.
+            3+ years of experience specializing in n8n workflow automation, Python backend systems, and frontend integrations.
           </p>
         </div>
 

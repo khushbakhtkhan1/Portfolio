@@ -29,3 +29,27 @@
     @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6;
   }
 }
+
+/* Projects Carousel Pagination */
+.projects-bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark .projects-bullet {
+  background: #475569;
+}
+
+.projects-bullet-active {
+  width: 32px;
+  background: #703AC0;
+}
+
+.dark .projects-bullet-active {
+  background: #9b6dd7;
+}

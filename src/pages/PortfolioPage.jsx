@@ -15,6 +15,15 @@ const projects = [
         view: '/agaahi-poster.pdf',
         documentation: '/agaahi-report.pdf',
       },
+      {
+        title: 'AI B2B Lead Gen & Automated Outreach Engine',
+        description: 'Built a fully automated B2B sales pipeline using n8n. A webhook captures target criteria from a form, Apify scrapes validated leads, and a GPT-4o-mini Lead Intelligence Agent analyzes each business to identify pain points, select optimal contact emails, and generate hyper-personalized 3-step cold email sequences. All enriched data flows into a Google Sheets CRM with live dashboard endpoints and workflow controls.',
+        image: '/lead-gen-engine.png',
+        tags: ['n8n', 'GPT-4o-mini', 'Apify API', 'Google Sheets CRM', 'Webhooks', 'REST APIs', 'Workflow Automation'],
+        liveDemo: null,
+        view: null,
+        documentation: null,
+      },
       
       {
         title: 'AI Resilience: A Revolutionary Benchmarking Model for AI Safety',

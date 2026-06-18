@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AcademicCapIcon, BriefcaseIcon, ArrowDownTrayIcon, StarIcon, TrophyIcon } from '@heroicons/react/24/solid';
+import { AcademicCapIcon, BriefcaseIcon, ArrowDownTrayIcon, StarIcon, TrophyIcon, BookOpenIcon } from '@heroicons/react/24/solid';
 import Navbar from '../components/Navbar'; // Assuming Navbar is in components
 import Footer from '../components/Footer'; // Assuming Footer is in components
 
@@ -9,40 +9,63 @@ const education = [
   {
     degree: 'Bachelors in Software Engineering',
     institution: 'NED University of Engineering and Technology, Karachi',
-    period: '2021 - 2025',
-    details: 'CGPA: 3.77 / 4.00. Focused on software development principles, Artificial Intelligence, Datawarehouse and Mining, and modern web technologies.',
+    period: 'Nov 2021 - Jun 2025',
+    details: 'CGPA: 3.77 / 4.00. Specialized in software engineering principles, machine learning integration, and database systems.',
   },
   {
-    degree: 'Intermediate in Pre-Engineering',
-    institution: 'St. Lawrence Govt Girls Degree College, Karachi',
+    degree: 'Intermediate in Pre-Engineering (XII / HSC)',
+    institution: 'St. Lawrence Government Degree Girls College, Karachi',
     period: '2019 - 2021',
-    details: 'Achieved 95% marks. Excelled in Mathematics, Physics, and Chemistry with outstanding academic performance.',
+    details: 'Achieved 95% marks. Outstanding academic performance.',
+  },
+  {
+    degree: 'Matriculation (X / SSC)',
+    institution: 'Little Folks School, Karachi',
+    period: '2017 - 2019',
+    details: 'Achieved 85% marks.',
   },
 ];
 
 const experience = [
-    {
-        role: 'Software Engineer',
-        company: 'Iris Labs',
-        period: 'Sept 2023 - June 2025',
-        responsibilities: [
-          'Built React/Next.js frontends with modern JavaScript frameworks and responsive design principles.',
-          'Developed FastAPI backends for AI projects, ensuring scalable and efficient API architecture.',
-          'Created and implemented n8n workflows for automation, collaborating with ML and backend teams.',
-          'Integrated AI/ML solutions into web applications, enhancing user experience and functionality.',
-        ],
-      },
-      {
-        role: 'Full Stack Developer Intern',
-        company: 'Smart City Lab, NCAI',
-        period: 'Jun 2023 - Aug 2023',
-        responsibilities: [
-          'Contributed to the development of an Advanced Driver Monitoring System using modern web technologies.',
-          'Integrated Firebase for real-time data management on the frontend, ensuring seamless data flow.',
-          'Collaborated with cross-functional teams to deliver high-quality full-stack solutions.',
-          'Implemented responsive UI components and optimized application performance.',
-        ],
-      },
+  {
+    role: 'Applied AI Automation Engineer',
+    company: 'Plutus21',
+    period: 'Aug 2025 - Present',
+    responsibilities: [
+      'Designed and deployed AI-driven workflow automations using n8n, Python, and Replit across finance, marketing, and HR.',
+      'Built OpenAI-powered intelligent agents and custom integrations to automate repetitive processes.',
+      'Connected and integrated complex APIs to eliminate manual errors and boost business productivity.',
+    ],
+  },
+  {
+    role: 'Senior AI Automation Engineer (Part-time)',
+    company: 'SMBiz',
+    period: 'Feb 2026 - June 2026',
+    responsibilities: [
+      'Built end-to-end automated lead generation and outreach systems using n8n, Apify, and GPT-4.',
+      'Developed AI-personalized email sequencing systems with automated follow-ups and CRM integrations.',
+      'Created custom social media automation and data extraction workflows to streamline marketing pipelines.',
+    ],
+  },
+  {
+    role: 'Software Engineer',
+    company: 'Iris Labs',
+    period: 'Sept 2023 - June 2025',
+    responsibilities: [
+      'Developed advanced n8n workflow automations, integrating custom API hooks and services.',
+      'Built responsive React/Next.js frontends and engineered FastAPI/Python backends for AI projects.',
+      'Collaborated with machine learning and backend teams to deploy production AI solutions.',
+    ],
+  },
+  {
+    role: 'Full Stack Developer Intern',
+    company: 'NCAI',
+    period: 'Aug 2023 - Oct 2023',
+    responsibilities: [
+      'Contributed to the development of an Advanced Driver Monitoring System using computer vision and Python.',
+      'Integrated Firebase for real-time data management on the frontend and dashboard components.',
+    ],
+  },
 ];
 
 const certifications = [
@@ -79,10 +102,25 @@ const certifications = [
 ];
 
 const skills = {
-  'Frontend Development': ['React.js', 'Next.js', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Responsive Design'],
-  'Automation & AI/ML': ['n8n Workflow Automation', 'NLP & LLMs', 'Langchain', 'Transformers (Hugging Face)', 'Power BI'],
-  'Backend & Tools': ['FastAPI', 'Python', 'Node.js', 'Firebase', 'Git & GitHub', 'RESTful APIs'],
+  'Automation & Scripting': ['n8n Workflow Automation', 'Python & Scripting', 'API Integration & Webhooks', 'Zapier', 'Make.com'],
+  'AI/ML & NLP': ['NLP & LLMs', 'LangChain', 'Transformers (Hugging Face)', 'Adversarial ML & AI Safety'],
+  'Full Stack Development': ['React.js', 'Next.js', 'FastAPI', 'SQL / MongoDB', 'JavaScript (ES6+)', 'Visualization (Power BI / Chart.js)'],
 };
+
+const publications = [
+  {
+    title: 'Role of Blockchain and NFTs in Industry 5.0',
+    description: 'Research publication exploring the applications of decentralized ledgers and non-fungible tokens in smart manufacturing and automation.',
+  },
+  {
+    title: 'Comparative Analysis of CNN and LSTM',
+    description: 'Comparative study evaluating deep learning architectures (CNN and LSTM) for sequential and image classification tasks.',
+  },
+  {
+    title: 'Image Caption Generator (Captionify)',
+    description: 'Implementation and analysis of a multimodal deep learning system combining computer vision and NLP to generate descriptive captions for images.',
+  },
+];
 
 // --- Components --- //
 const TimelineItem = ({ icon, item }) => (
@@ -139,6 +177,30 @@ const CertificationsSection = () => (
             </span>
           </div>
           <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{cert.description}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+);
+
+const PublicationsSection = () => (
+  <div className="mt-16">
+    <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12 flex items-center justify-center">
+      <BookOpenIcon className="h-8 w-8 mr-3 text-primary" />
+      Publications & Research
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {publications.map((pub, index) => (
+        <motion.div 
+          key={index}
+          className="bg-white dark:bg-gray-800/50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-primary"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3">{pub.title}</h3>
+          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{pub.description}</p>
         </motion.div>
       ))}
     </div>
@@ -224,6 +286,9 @@ const ResumePage = () => {
 
         {/* Certifications Section */}
         <CertificationsSection />
+
+        {/* Publications Section */}
+        <PublicationsSection />
 
         {/* Skills Section */}
         <SkillsSection />
